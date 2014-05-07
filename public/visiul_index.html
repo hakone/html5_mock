@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <title>jQuery Mobile Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+  <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function(){
+      /*
+      apply overrides here
+      example:
+      $.mobile.activeBtnClass = "my-class";
+      */
+      $.mobile.defaultPageTransition = "slide";
+      $.mobile.buttonMarkup.hoverDelay = 100;
+      $.mobile.pageLoadErrorMessage = "Could not load page";
+    });
+  </script>
+  <script src="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+</head>
+<body>
+<section data-role="page" id="home">
+  <header data-role="header">
+    <h1>Page header</h1>
+  </header><!-- /header -->
+  <article role="main" class="ui-content">
+
+    <img src="d__dmx__1__50.jpg" width="30%" alt="">
+    <img src="d__dmx__1__50.jpg" width="30%" alt="">
+    <img src="d__dmx__1__50.jpg" width="30%" alt="">
+    <img src="d__dmx__1__50.jpg" width="30%" alt="">
+    <img src="d__dmx__1__50.jpg" width="30%" alt="">
+    <img src="d__dmx__1__50.jpg" width="30%" alt="">
+    <img src="d__dmx__1__50.jpg" width="30%" alt="">
+  </article><!-- /content -->
+  <footer data-role="footer">
+    <h4>Page footer</h4>
+  </footer><!-- /footer -->
+</section><!-- /page -->
+
+</body>
+</html>

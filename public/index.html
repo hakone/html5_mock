@@ -1,0 +1,120 @@
+
+<html>
+<head>
+  <title>jQuery Mobile Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function(){
+      /*
+      apply overrides here
+      example:
+      $.mobile.activeBtnClass = "my-class";
+      */
+      $.mobile.defaultPageTransition = "slide";
+      $.mobile.buttonMarkup.hoverDelay = 100;
+      $.mobile.pageLoadErrorMessage = "Could not load page";
+    });
+  </script>
+  <script src="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <style>
+    body {
+      height: 100%;
+      background: #CCC;
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+      -webkit-text-size-adjust: 100%;
+    }
+    div.box {
+      width: 50px;
+      height: 100%;
+      background-color: #108040;
+      position: absolute;
+
+    }
+    div.box.swipe {
+      background-color: #7ACEF4;
+    }
+    .ui-dialog-contain {
+      width: 95.5%;
+      max-width: 600px;
+      margin: 10% auto 15px auto;
+      padding: 0;
+      position: relative;
+      top: -15px;
+    }
+    #inner {
+      padding-bottom: 10px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    #box {
+      background-color: #7ACEF4;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    #contents{
+      position: relative;
+    }
+    .line-button {
+      height: 100px;
+    }
+    button.ui-btn {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<div data-role="page">
+
+  <div role="main" class="ui-content">
+    <div id="contents">
+      <div class="box"></div>
+      <img id="open" src="d__dmx__103__400.jpg" />
+    </div>
+  </div>
+
+  <!--1パネル領域を定義-->
+  <div id="panel" data-role="panel" data-display="overlay">
+    <div id="inner">
+      <h3>5 / 128</h3>
+    </div>
+    <ul data-role="listview">
+      <li><a href="visiul_index.html" data-rel="dialog">ビジュアル目次</a></li>
+      <li><a href="info.html" data-rel="dialog">目次</a></li>
+      <li><a href="#">ページ切り替え</a></li>
+      <li><a href="#" data-rel="close" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-left">閉じる</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+$(function(){
+  // Bind the swipeHandler callback function to the swipe event on div.box
+  $("div.box").on("swipe", swipeHandler);
+
+  // init
+  $("#panel").panel("open");
+
+  // Callback function references the event target and adds the 'swipe' class to it
+  function swipeHandler(event){
+    $("#panel").panel("open");
+  }
+});
+</script>
+
+</body>
+</html>
+
+
+
+

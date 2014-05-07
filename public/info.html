@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <title>jQuery Mobile Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+  <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function(){
+      /*
+      apply overrides here
+      example:
+      $.mobile.activeBtnClass = "my-class";
+      */
+      $.mobile.defaultPageTransition = "slide";
+      $.mobile.buttonMarkup.hoverDelay = 100;
+      $.mobile.pageLoadErrorMessage = "Could not load page";
+    });
+  </script>
+  <script src="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+</head>
+<body>
+
+<section data-role="page" id="home">
+  <header data-role="header">
+    <h1>Page header</h1>
+  </header><!-- /header -->
+  <article role="main" class="ui-content">
+  <ul data-role="listview">
+    <li><a href="acura.html">コマンドプロンプト</a></li>
+    <li><a href="acura.html">Perlとは</a></li>
+    <li><a href="acura.html">Perlインストール</a></li>
+    <li><a href="acura.html">Perl基礎文法最速マスター</a></li>
+    <li><a href="acura.html">現代的なPerlの記述方法</a></li>
+    <li><a href="acura.html">実践で役立つPerl正規表現</a></li>
+    <li><a href="acura.html">配列とハッシュを自由に扱う</a></li>
+    <li><a href="acura.html">サブルーチンの作成</a></li>
+    <li><a href="acura.html">Perlのスコープを理解する</a></li>
+    <li><a href="acura.html">ファイル入出力の基礎</a></li>
+    <li><a href="acura.html">Perlオブジェクト指向入門</a></li>
+    <li><a href="acura.html">デバッガの手引き</a></li>
+    <li><a href="acura.html">Perl豆知識</a></li>
+    <li><a href="acura.html">Perl FAQ</a></li>
+  </ul>
+</section><!-- /page -->
+
+</body>
+</html>
